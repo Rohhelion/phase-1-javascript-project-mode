@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Main content styles */
+  main {
+    padding: 20px;
+  }
+  
+  /* Search section styles */
+  #search {
+    margin-bottom: 20px;
+  }
+  
+  /* Results section styles */
+  #results {
+    margin-bottom: 20px;
+  }
+  
+  /* Details section styles */
+  #details {
+    margin-bottom: 20px;
+  }
+  
+  /* Reading list section styles */
+  #reading-list {
+    margin-bottom: 20px;
+  }
+  
