@@ -7,32 +7,41 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Book Recommendation App</h1>
-  </header>
+  <div class="container">
+    <header class="bg-light py-3">
+      <h1 class="text-center">Book Recommendation App</h1>
+    </header>
 
-  <main>
-    <section id="search">
-      <h2>Search for Books</h2>
-      <!-- Add your search form here -->
-    </section>
+    <main class="py-3">
+      <section id="search" class="mb-4">
+        <h2>Search for Books</h2>
+        <form id="search-form" class="d-flex">
+          <input type="text" id="search-input" class="form-control-mr-2" placeholder="Enter a book title, author, or keyword">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </section>
 
-    <section id="results">
-      <h2>Search Results</h2>
-      <!-- Add your search results here -->
-    </section>
+      <section id="results" class="mb-4">
+        <h2>Search Results</h2>
 
-    <section id="details">
-      <h2>Book Details</h2>
-      <!-- Add the book details section here -->
-    </section>
+        <div id="search-results"></div>
+      </section>
 
-    <section id="reading-list">
-      <h2>Reading List</h2>
-      <!-- Add the reading list section here -->
-    </section>
-  </main>
+      <section id="details" class="mb-4">
+        <h2>Book Details</h2>
+        <div id="book-details"></div>
+      </section>
 
-  <script src="script.js"></script>
+      <section id="reading-list" class="mb-4">
+        <h2>Reading List</h2>
+        <ul id="reading-list-items"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </body>
 </html>
