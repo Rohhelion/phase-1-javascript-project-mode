@@ -1,100 +1,96 @@
-
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    background-color:rgb(133, 8, 8);
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: rgb(133, 8, 8);
+}
 
-  .container {
-    margin: 20px;
-  }
-  
-  h1, h2 {
-    color: #333;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Results section styles */
-  #results {
-    margin-bottom: 20px;
-    display: flex;
-  }
-  
-  /* Details section styles */
-  #details {
-    align-items: center;
-    margin-bottom: 20px;
-    color: green;
-    background-color: black;
-  }
-  #book-details {
-    color:black;
-    background-color: black;
-  }
-  
-  /* Reading list section styles */
-  #reading-list {
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-    background-color: green;
-    border-radius: 20px;
-  }
+.container {
+  margin: 20px;
+}
 
-  .text-center {
-font-size: large;
-font-family: Georgia, 'Times New Roman', Times, serif;
-text-align: center;
-  }
-  .btn-primary {
-    color: white;
-    background-color: red;
-    padding: 10px 20px;
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Results section styles */
+#results {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-item {
+  width: calc(33.33% - 10px); /* Adjust the width based on your preference */
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Details section styles */
+#details {
+  align-items: center;
+  margin-bottom: 20px;
+  color: green;
+  background-color: black;
+}
+
+#book-details {
+  color: black;
+  background-color: black;
+}
+
+/* Reading list section styles */
+#reading-list {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  background-color: green;
+  border-radius: 20px;
+}
+
+.text-center {
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.btn-primary {
+  color: white;
+  background-color: red;
+  padding: 10px 20px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
- }
- #search-input {
-    border: none;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 40px;
+}
 
- }
+#search-input {
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+
 .py-3 {
- color: rgb(50, 250, 50);
-    border: none;
-    border-radius: 20px;
-    display: ruby-base-container;
-   
-}
-.form-control-mr-2 {
-    color: blue;
+  color: rgb(50, 250, 50);
+  border: none;
+  border-radius: 20px;
+  display: ruby-base-container;
 }
 
-
-
-#search {
-    background-color: black;
-    color: rgb(4, 107, 4);
-    font-style: var(#333);
-    font-weight: bolder;
-    border: none;
-    display: block;
-   
+.form-control {
+  color: blue;
 }
- #book-details {
-    margin: 20px;
-    background-color: white;
-    border-radius: 20px;
- }

@@ -1,9 +1,9 @@
-// script.js
+// app.js
 
-const apiKey = '&bibkeys=OLID:OL123M'
+const apiKey = '&bibkeys=OLID:OL123M';
 
 function searchBooks(event) {
-  event.preventDefault(); // Prevent form submission from reloading the page
+  event.preventDefault();
 
   const searchQuery = document.getElementById('search-input').value;
   const url = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}`;
