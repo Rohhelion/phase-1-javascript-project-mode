@@ -18,14 +18,14 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff52;
+    background-color: rgba(255, 255, 255, 0.205);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   
   /* Header styles */
   header {
-    background-color: #11138b3d;
+    background-color: rgba(17, 19, 139, 0.24);
     padding: 20px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -45,7 +45,7 @@
   h2 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: #333;
+    color: #0f0707;
   }
   
   #search-form {
@@ -59,15 +59,15 @@
     font-size: 16px;
     border: none;
     border-radius: 4px;
-    background-color: #f8f8f879;
+    background-color: rgba(248, 248, 248, 0.6);
   }
   
   .btn-primary {
-    background-color: #3c0d688c;
-    color: #ffffff;
+    background-color: rgba(60, 13, 104, 0.55);
+    color: #080707fa;
     border: none;
     padding: 12px 24px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -84,16 +84,21 @@
   
   #search-results {
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
   }
   
   #search-results li {
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #f8f8f86b;
+    background-color: rgba(248, 248, 248, 0.42);
     border-radius: 4px;
     border: 1px solid #ddd;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     transition: background-color 0.3s ease;
   }
   
@@ -105,14 +110,15 @@
   .book-thumbnail {
     width: 80px;
     height: 120px;
-    margin-right: 20px;
+    margin-bottom: 10px;
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .book-info {
-    flex: auto;
+    flex: 1;
+    text-align: center;
   }
   
   .book-title {
@@ -133,7 +139,7 @@
   
   #book-details {
     padding: 20px;
-    background-color: #f8f8f842;
+    background-color: rgba(248, 248, 248, 0.64);
     border-radius: 4px;
     border: 1px solid #ddd;
   }
@@ -183,7 +189,7 @@
   #reading-list-items li {
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #f8f8f852;
+    background-color: rgba(248, 248, 248, 0.57);
     border-radius: 4px;
     border: 1px solid #ddd;
     display: flex;

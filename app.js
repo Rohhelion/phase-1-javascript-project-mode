@@ -39,6 +39,7 @@ function displaySearchResults(data) {
       <h3>${title}</h3>
       <p>By: ${authors}</p>
       <button class="details-button" data-id="${book.id}">View Details</button>
+      <div class="book-details" style="display: none;"></div>
     `;
 
     resultsContainer.appendChild(bookItem);
@@ -52,51 +53,65 @@ function attachDetailsEventListeners() {
   detailsButtons.forEach(button => {
     button.addEventListener('click', () => {
       const bookId = button.dataset.id;
-      getBookDetails(bookId);
+      const bookDetailsContainer = button.parentNode.querySelector('.book-details');
+      getBookDetails(bookId, bookDetailsContainer);
     });
   });
 }
 
-function getBookDetails(bookId) {
+function getBookDetails(bookId, bookDetailsContainer) {
   const url = `https://www.googleapis.com/books/v1/volumes/${bookId}?key=${apiKey}`;
 
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      displayBookDetails(data);
+      displayBookDetails(data, bookDetailsContainer);
     })
     .catch(error => {
       console.log(error);
     });
 }
 
-function displayBookDetails(book) {
-  const detailsContainer = document.getElementById('book-details');
-
+function displayBookDetails(book, bookDetailsContainer) {
   const title = book.volumeInfo.title;
   const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown Author';
   const description = book.volumeInfo.description || 'No description available.';
   const publicationDate = book.volumeInfo.publishedDate || 'Unknown';
 
-  detailsContainer.innerHTML = `
+  bookDetailsContainer.innerHTML = `
     <h3>${title}</h3>
     <p>By: ${authors}</p>
     <p>Published: ${publicationDate}</p>
     <p>${description}</p>
-    <button id="add-to-reading-list" data-id="${book.id}">Add to Reading List</button>
+    <button class="add-to-reading-list" data-id="${book.id}">Add to Reading List</button>
   `;
 
-  const addToReadingListButton = document.getElementById('add-to-reading-list');
-  addToReadingListButton.addEventListener('click', () => {
-    addToReadingList(book);
+  const addToReadingListButtons = document.querySelectorAll('.add-to-reading-list');
+  addToReadingListButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const bookId = button.dataset.id;
+      addToReadingList(bookId);
+    });
   });
+
+  // Toggle book details visibility on click
+  bookDetailsContainer.style.display = bookDetailsContainer.style.display === 'none' ? 'block' : 'none';
 }
 
-function addToReadingList(book) {
-  const readingListItems = document.getElementById('reading-list-items');
-  const listItem = document.createElement('li');
-  listItem.textContent = book.volumeInfo.title;
-  readingListItems.appendChild(listItem);
+function addToReadingList(bookId) {
+  const url = `https://www.googleapis.com/books/v1/volumes/${bookId}?key=${apiKey}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const readingListItems = document.getElementById('reading-list-items');
+      const listItem = document.createElement('li');
+      listItem.textContent = data.volumeInfo.title;
+      readingListItems.appendChild(listItem);
+    })
+    .catch(error => {
+      console.log(error);
+    });
 }
 
 document.getElementById('search-form').addEventListener('submit', searchBooks);
