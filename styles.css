@@ -1,142 +1,212 @@
-/* General styles */
-body {
-  font-family: "Roboto", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-}
+/* styles.css */
 
-.container {
-  margin: 20px;
-}
-
-h1, h2, h3 {
-  color: #333;
-}
-
-/* Header styles */
-header {
-  background-color: #333;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-header h1 {
-  color: #fff;
-  font-size: 24px;
-  margin: 0;
-}
-
-/* Search section styles */
-#search {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#search-input {
-  border: none;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 40px;
-  width: 70%;
-}
-
-#search-input:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-#search-form button {
-  color: #fff;
-  background-color: #ff4d4d;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Results section styles */
-#results {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  margin-bottom: 20px;
-}
-
-.book-item {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.book-item h3 {
-  font-size: 18px;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.book-item p {
-  font-size: 14px;
-  color: #777;
-  margin-top: 0;
-}
-
-/* Details section styles */
-#details {
-  margin-bottom: 20px;
-}
-
-#book-details {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-/* Reading list section styles */
-#reading-list {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-  background-color: #ff4d4d;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-/* Text center utility class */
-.text-center {
-  text-align: center;
-}
-
-/* Primary button styles */
-.btn-primary {
-  color: #fff;
-  background-color: #ff4d4d;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #e64141;
-}
-
-.btn-primary:active {
-  background-color: #c63939;
-}
-
-/* Input field styles */
-.form-control {
-  color: #333;
-}
-
-.py-3 {
-  color: #32fa32;
-}
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-image: url("https://images.unsplash.com/photo-1521920592574-49e0b121c964?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2xkJTIwbGlicmFyeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80");
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff52;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #11138b3d;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Search section styles */
+  #search {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  #search-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  #search-input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f879;
+  }
+  
+  .btn-primary {
+    background-color: #3c0d688c;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #69102b;
+  }
+  
+  /* Results section styles */
+  #results {
+    margin-bottom: 30px;
+  }
+  
+  #search-results {
+    list-style: none;
+  }
+  
+  #search-results li {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f8f86b;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  #search-results li:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  .book-thumbnail {
+    width: 80px;
+    height: 120px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-info {
+    flex: auto;
+  }
+  
+  .book-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .book-author {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Details section styles */
+  #details {
+    margin-bottom: 30px;
+  }
+  
+  #book-details {
+    padding: 20px;
+    background-color: #f8f8f842;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  #book-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0c0303f6;
+  }
+  
+  #book-details p {
+    -webkit-margin-bottom-collapse: 20px;
+    color: #0f0f0f;
+  }
+  
+  .book-cover {
+    max-width: 300px;
+    margin-right: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-details-info {
+    display: inline-flexbox;
+    margin-bottom: 15px;
+  }
+  
+  .book-details-info span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .book-description {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Reading list section styles */
+  #reading-list {
+    margin-bottom: 30px;
+  }
+  
+  #reading-list-items {
+    list-style-position: outside;
+  }
+  
+  #reading-list-items li {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f8f852;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+  }
+  
+  #reading-list-items li:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  .remove-button {
+    color: #ff5252;
+    font-size: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    color: #d40000;
+  }
+  
